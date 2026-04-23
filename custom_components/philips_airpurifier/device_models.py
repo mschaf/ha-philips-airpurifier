@@ -525,6 +525,17 @@ _CONFIG_AC0850_GEN3 = DeviceModelConfig(
     unavailable_filters=[PhilipsApi.FILTER_NANOPROTECT_PREFILTER],
 )
 
+# AC2221/13 config (AWS_Philips_AIR_Combo family)
+_CONFIG_AC2221_13 = DeviceModelConfig(
+    api_generation=ApiGeneration.GEN3,
+    preset_modes=_AC0850_GEN3_PRESET_MODES,
+    speeds=_AC0850_GEN3_SPEEDS,
+    switches=[],
+    lights=[],
+    selects=[],
+    unavailable_filters=[PhilipsApi.FILTER_NANOPROTECT_PREFILTER],
+)
+
 # AC0950 config
 _CONFIG_AC0950 = DeviceModelConfig(
     api_generation=ApiGeneration.GEN3,
@@ -700,6 +711,10 @@ DEVICE_MODELS: dict[str, DeviceModelConfig] = {
     FanModel.AC0850_70C: _CONFIG_AC0850_GEN3,
     FanModel.AC0850_81: _CONFIG_AC0850_GEN3,
     FanModel.AC0850_85: _CONFIG_AC0850_GEN2,
+    # =========================================================================
+    # AC2221
+    # =========================================================================
+    FanModel.AC2221_13: _CONFIG_AC2221_13,
     # =========================================================================
     # AC0950 family
     # =========================================================================
