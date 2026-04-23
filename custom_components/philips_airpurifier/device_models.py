@@ -531,7 +531,9 @@ _CONFIG_AC2221 = DeviceModelConfig(
     preset_modes={
         PresetMode.AUTO: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 0},
         PresetMode.SLEEP: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 17},
+        PresetMode.LOW: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 2},
         PresetMode.MEDIUM: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 19},
+        PresetMode.HIGH: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 4},
         PresetMode.TURBO: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 18},
     },
     speeds={
