@@ -528,8 +528,22 @@ _CONFIG_AC0850_GEN3 = DeviceModelConfig(
 # AC2221 config (AWS_Philips_AIR_Combo family, e.g. AC2221/13)
 _CONFIG_AC2221 = DeviceModelConfig(
     api_generation=ApiGeneration.GEN3,
-    preset_modes=_AC0850_GEN3_PRESET_MODES,
-    speeds=_AC0850_GEN3_SPEEDS,
+    preset_modes={
+        PresetMode.AUTO: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 0},
+        PresetMode.SLEEP: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 17},
+        PresetMode.MEDIUM: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 19},
+        PresetMode.TURBO: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 18},
+    },
+    speeds={
+        PresetMode.SLEEP: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 17},
+        PresetMode.SPEED_1: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 1},
+        PresetMode.SPEED_2: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 2},
+        PresetMode.SPEED_3: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 3},
+        PresetMode.SPEED_4: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 4},
+        PresetMode.SPEED_5: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 5},
+        PresetMode.MEDIUM: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 19},
+        PresetMode.TURBO: {PhilipsApi.NEW2_POWER: 1, PhilipsApi.NEW2_MODE_B: 18},
+    },
     switches=[],
     lights=[],
     selects=[],
